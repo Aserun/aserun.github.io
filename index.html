@@ -1,22 +1,16 @@
 <!doctype HTML>
 <html>
-<!-- A-Frame ライブラリの読み込み -->
+<!-- AR.js by @jerome_etienne - github: https://github.com/jeromeetienne/ar.js - info: https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf -->
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-<!-- AR.js ライブラリの読み込み -->
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-<body style='margin:0px; overflow:hidden;'>
-<!-- こっからA-Frame -->
-<a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
-    <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
-　　 <!-- こっからARの世界。マーカー上になにを展開するかを書く -->
-    <a-marker preset='hiro'>
-        <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
-        <!-- <a-text value="google!" position="0 1.3 0" align="center"></a-text> -->
-    </a-marker>
- 
-    <!-- arなのでこんな感じでカメラが必要らしい。 -->
-    <a-entity camera></a-entity>
-</a-scene>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/dev/aframe/build/aframe-ar.js"></script>
+<body style='margin : 0px; overflow: hidden;'>
+	<a-scene embedded arjs='sourceType: webcam;'>
+      <a-marker preset='hiro' >
+		  <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+      </a-marker>
+      
+		<a-camera-static/>
+	</a-scene>
 <!-- ここまででA-Frameおわり -->
 <script>
 var m = document.querySelector("a-marker");
