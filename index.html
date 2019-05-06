@@ -4,15 +4,9 @@
 <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
 <!-- AR.js ライブラリの読み込み -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-<script>
-        var m = document.querySelector("a-marker")
-        m.addEventListener("markerFound", (e)=>{
-            //var url = 'https://wwww.google.com';
-            //window.open(url,"_blank");
-            //window.location.href = url;
-            console.log("found");
-            }
-        )
+<script src="test.js">
+        var m = document.querySelector("a-marker");
+        m.addEventListener("markerFound", (e)=>{console.log("found")})
 
         m.addEventListener("markerLost", (e)=>{console.log("lost")})
 </script>
