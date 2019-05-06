@@ -17,12 +17,9 @@
         var m = document.querySelector("a-marker")
         m.addEventListener("markerFound", (e)=>{
             var url = 'https://wwww.google.com'
-            if(window.open(url,"_blank")){
-
-            }else{
+                window.open(url,"_blank");
                 window.location.href = url;
-            }
-                console.log("found")
+                console.log("found");
             }
         )
 
