@@ -12,23 +12,6 @@
     <a-marker preset='hiro' id="amarker" ref="amarker">
         <a-text value="Merry X'mas !！！" position="0 1.3 0" align="center"></a-text>
     </a-marker>
-    <script>
-    var amarker = document.querySelector("#amarker")
-    var flag = false
-    if(amarker.object3D.visible == true) {
-        
-        console.log('marker is visible');
-        
-        if(!flag)
-        {
-            window.open('https://www.geogebra.org/m/myJTXcm5', '_blank');
-        }
-        flag = true
-    }
-    else {
-        console.log('marker is lost');
-    }
-    </script>
     <!-- arなのでこんな感じでカメラが必要らしい。 -->
     <a-entity camera></a-entity>
 </a-scene>
